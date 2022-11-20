@@ -1,0 +1,1867 @@
+{
+	"info": {
+		"_postman_id": "b4d248cf-4afc-47d8-908a-0dcce16a32a8",
+		"name": "Neversitup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5600608"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "สมัครสมาชิก",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"username\":\"Admin123\",\r\n    \"name\":\"AdminTest\",\r\n    \"password\":\"123456\",\r\n    \"confirmpassword\":\"123456\",\r\n    \"role\":[\"Admin\"]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "สมัครสมาชิกแบบปกติ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"username\":\"test123\",\r\n    \"name\":\"Test\",\r\n    \"password\":\"123456\",\r\n    \"confirmpassword\":\"123456\",\r\n    \"role\":[\"User\"]\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-+2drbNtQ0iV7mMFMuxeH2QeqaTY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 09:05:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"username is already in use.\"\n}"
+						},
+						{
+							"name": "สมัครสมาชิกสิทธิ Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"username\":\"Admin123\",\r\n    \"name\":\"AdminTest\",\r\n    \"password\":\"123456\",\r\n    \"confirmpassword\":\"123456\",\r\n    \"role\":[\"Admin\"]\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-+2drbNtQ0iV7mMFMuxeH2QeqaTY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 09:05:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"username is already in use.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "เข้าสู่ระบบ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"username\":\"Admin123\",\r\n    \"password\":\"123456\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "เข้าสู่ระบบ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"username\":\"test123\",\r\n    \"password\":\"123456\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "348"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15c-a/oySV3q1apVtOJ6c1M7dKzi4fE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 09:08:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"login successfully\",\n    \"payload\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw\",\n        \"expires_in\": 1668676103,\n        \"token_type\": \"Bearer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "เรียกดู Profile ของตัวเอง",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRiOWNhMzQxYmQyOGI4ZWY5NGFhNSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJVc2VyIl0sImlhdCI6MTY2ODU5NDc2MSwiZXhwIjoxNjY4NjgxMTYxfQ.8-XvfSE7p3HSCTNKN8MRB1rs1uJ9VuNJGbis7emExL8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "เรียกดู Profile ของตัวเอง",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "ต้อง Login ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/user/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10d-E15vyORevkMu6qro3nObpWpRpno\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 09:17:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": {\n        \"_id\": \"6374a7d59a32b72a5d0b18fe\",\n        \"username\": \"test123\",\n        \"password\": \"$2b$10$wxgv7MSHRD4WgrHGxa92p.dVeoqlcd56scIS9ZVM14eRipa77x1Ta\",\n        \"name\": \"test\",\n        \"role\": [\n            \"Admin\"\n        ],\n        \"status\": 1,\n        \"createdAt\": \"2022-11-16T09:05:25.563Z\",\n        \"updatedAt\": \"2022-11-16T09:05:25.563Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "เรียกดู Order history ของตัวเอง",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRiOWNhMzQxYmQyOGI4ZWY5NGFhNSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJVc2VyIl0sImlhdCI6MTY2ODY1NDU2MywiZXhwIjoxNjY4NzQwOTYzfQ.g_iu9V05DQf717cFvMGPzKUAhMs414MFjVzkowX_kMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "เรียกดู Order history ของตัวเอง",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "ต้อง Login ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/user/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"order"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f5-XYK60aF/qGgr20PXFCMT5vs97I0\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 05:42:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": [\n        {\n            \"_id\": \"6375a8b2d2da9c279ce92d50\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 1\n        },\n        {\n            \"_id\": \"6375a950d624ed0eb887a56c\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 1\n        },\n        {\n            \"_id\": \"6375a972fc192b30995ee0c7\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 1\n        },\n        {\n            \"_id\": \"6375a97cfc192b30995ee0cb\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 1\n        },\n        {\n            \"_id\": \"6375aa1ffc192b30995ee0cf\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 1\n        },\n        {\n            \"_id\": \"6375adee46fcdc2efef41909\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 1\n        },\n        {\n            \"_id\": \"6375ae0ec116876821987aef\",\n            \"name\": \"test\",\n            \"product\": [\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 1,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                },\n                {\n                    \"id\": \"6375963105640a73cf101851\",\n                    \"qty\": 2,\n                    \"name\": \"product3\",\n                    \"price\": 300\n                }\n            ],\n            \"status\": 2\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "เพิ่มสินค้า",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzU5NWQ0YzgyZjYzNjIxYmRjZjMxYyIsInVzZXJuYW1lIjoiQWRtaW4xMjMiLCJuYW1lIjoiQWRtaW5UZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg2NTA0ODIsImV4cCI6MTY2ODczNjg4Mn0.c01UM9BikmQ7cOwJ_jxMPseCMVTD7hUzn0m6xI03to0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"product2\",\r\n    \"price\":100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "เพิ่มสินค้า",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "Role Admin ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"product1\",\r\n    \"price\":100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-h2lGQECXpemYHgZpVvbfV20jnh8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 02:02:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ดูข้อมูลสินค้าทั้งหมด",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzU5NWQ0YzgyZjYzNjIxYmRjZjMxYyIsInVzZXJuYW1lIjoiQWRtaW4xMjMiLCJuYW1lIjoiQWRtaW5UZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg2NTA0ODIsImV4cCI6MTY2ODczNjg4Mn0.c01UM9BikmQ7cOwJ_jxMPseCMVTD7hUzn0m6xI03to0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ดูข้อมูลสินค้าทั้งหมด",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzU5NWQ0YzgyZjYzNjIxYmRjZjMxYyIsInVzZXJuYW1lIjoiQWRtaW4xMjMiLCJuYW1lIjoiQWRtaW5UZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg2NTA0ODIsImV4cCI6MTY2ODczNjg4Mn0.c01UM9BikmQ7cOwJ_jxMPseCMVTD7hUzn0m6xI03to0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/product?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+											"description": "ต้อง Login"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "337"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"151-HrLdDpAHFKMRUwb+e5ioE+qh1TA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 02:23:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": [\n        {\n            \"_id\": \"6375963105640a73cf101851\",\n            \"name\": \"product3\",\n            \"price\": 300,\n            \"status\": 1,\n            \"createdAt\": \"2022-11-17T02:02:25.444Z\",\n            \"updatedAt\": \"2022-11-17T02:16:11.005Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6375990bae885fc195361434\",\n            \"name\": \"product2\",\n            \"price\": 100,\n            \"status\": 1,\n            \"createdAt\": \"2022-11-17T02:14:35.864Z\",\n            \"updatedAt\": \"2022-11-17T02:14:35.864Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ดูข้อมูลสินค้ารายตัว",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzU5NWQ0YzgyZjYzNjIxYmRjZjMxYyIsInVzZXJuYW1lIjoiQWRtaW4xMjMiLCJuYW1lIjoiQWRtaW5UZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg2NTA0ODIsImV4cCI6MTY2ODczNjg4Mn0.c01UM9BikmQ7cOwJ_jxMPseCMVTD7hUzn0m6xI03to0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/product/6375963105640a73cf101851",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"product",
+								"6375963105640a73cf101851"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ดูข้อมูลสินค้ารายตัว",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "ต้อง Login",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/product/6375963105640a73cf101851",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"product",
+										"6375963105640a73cf101851"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-zsyYg1o5kqGCXwfz/C5yHn20fNc\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 02:26:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": {\n        \"_id\": \"6375963105640a73cf101851\",\n        \"name\": \"product3\",\n        \"price\": 300,\n        \"status\": 1,\n        \"createdAt\": \"2022-11-17T02:02:25.444Z\",\n        \"updatedAt\": \"2022-11-17T02:16:11.005Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "แก้ไขข้อมูลสินค้า",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzU5NWQ0YzgyZjYzNjIxYmRjZjMxYyIsInVzZXJuYW1lIjoiQWRtaW4xMjMiLCJuYW1lIjoiQWRtaW5UZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg2NTA0ODIsImV4cCI6MTY2ODczNjg4Mn0.c01UM9BikmQ7cOwJ_jxMPseCMVTD7hUzn0m6xI03to0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"6375963105640a73cf101851\",\r\n    \"name\":\"product3\",\r\n    \"price\":300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "แก้ไขข้อมูลสินค้า",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"6375963105640a73cf101851\",\r\n    \"name\":\"product3\",\r\n    \"price\":300\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/product?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "Authorization",
+											"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+											"description": "Role Admin "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-PiqrMl4NQJvB8gNpzS00JOkCz/8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 02:16:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"update successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "สร้างรายการคำสั่งซื้อ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzlkMDQwODM3ZWY5NmE0MzRlZjAyMSIsInVzZXJuYW1lIjoiQWRtaW4xMjMiLCJuYW1lIjoiQWRtaW5UZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg5MzYwNDAsImV4cCI6MTY2OTAyMjQ0MH0.Kn-UgMUVgXGElrzbBRPUtovadumj8OVfn61xSBEN_bQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product\":[\r\n        {\"id\":\"6375963105640a73cf101851\",\"qty\":1},\r\n        {\"id\":\"6375963105640a73cf101851\",\"qty\":3}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "สร้าง Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "ต้อง Login",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product\":[\r\n        {\"id\":\"6375963105640a73cf101851\",\"qty\":1},\r\n        {\"id\":\"6375963105640a73cf101851\",\"qty\":2}\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-h2lGQECXpemYHgZpVvbfV20jnh8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 03:27:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"created successfully\",\n    \"payload\": {\n        \"userid\": \"6374b9ca341bd28b8ef94aa5\",\n        \"product\": [\n            {\n                \"id\": \"6375963105640a73cf101851\",\n                \"qty\": 1,\n                \"_id\": \"6375ae0ec116876821987af0\"\n            },\n            {\n                \"id\": \"6375963105640a73cf101851\",\n                \"qty\": 2,\n                \"_id\": \"6375ae0ec116876821987af1\"\n            }\n        ],\n        \"status\": 1,\n        \"_id\": \"6375ae0ec116876821987aef\",\n        \"createdAt\": \"2022-11-17T03:44:14.648Z\",\n        \"updatedAt\": \"2022-11-17T03:44:14.648Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ยกเลิกคำสั่งซื้อ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRiOWNhMzQxYmQyOGI4ZWY5NGFhNSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJVc2VyIl0sImlhdCI6MTY2ODY1NDU2MywiZXhwIjoxNjY4NzQwOTYzfQ.g_iu9V05DQf717cFvMGPzKUAhMs414MFjVzkowX_kMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/order/6375ae0ec116876821987aef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"order",
+								"6375ae0ec116876821987aef"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ยกเลิกคำสั่งซื้อ",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "ต้อง Login",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3002/order/6375ae0ec116876821987aef",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"order",
+										"6375ae0ec116876821987aef"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-PiqrMl4NQJvB8gNpzS00JOkCz/8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 03:45:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"update successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ดูรายละเอียดคำสั่งซื้อ",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRiOWNhMzQxYmQyOGI4ZWY5NGFhNSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJVc2VyIl0sImlhdCI6MTY2ODY1NDU2MywiZXhwIjoxNjY4NzQwOTYzfQ.g_iu9V05DQf717cFvMGPzKUAhMs414MFjVzkowX_kMA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/order/6375ae0ec116876821987aef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"order",
+								"6375ae0ec116876821987aef"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ดูรายละเอียดคำสั่งซื้อ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzRhN2Q1OWEzMmI3MmE1ZDBiMThmZSIsInVzZXJuYW1lIjoidGVzdDEyMyIsIm5hbWUiOiJ0ZXN0Iiwicm9sZSI6WyJBZG1pbiJdLCJpYXQiOjE2Njg1ODk3MDMsImV4cCI6MTY2ODY3NjEwM30._mU3cOzWWX1qxzwd603Pv-yN9xxKDnnq9TuKzsgDsZw",
+										"description": "ต้อง Login",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3002/order/6375ae0ec116876821987aef",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"order",
+										"6375ae0ec116876821987aef"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e3-39ObM8U+m6ToY2gJtrVArywmcCg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Nov 2022 05:08:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"payload\": {\n        \"_id\": \"6375ae0ec116876821987aef\",\n        \"name\": \"test\",\n        \"product\": [\n            {\n                \"id\": \"6375963105640a73cf101851\",\n                \"qty\": 1,\n                \"name\": \"product3\",\n                \"price\": 300\n            },\n            {\n                \"id\": \"6375963105640a73cf101851\",\n                \"qty\": 2,\n                \"name\": \"product3\",\n                \"price\": 300\n            }\n        ],\n        \"status\": 2\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

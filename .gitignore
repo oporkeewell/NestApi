@@ -1,0 +1,6 @@
+order-api/node_modules/
+product-api/node_modules/
+user-api/node_modules/
+order-api/dist/
+product-api/dist/
+user-api/dist/
